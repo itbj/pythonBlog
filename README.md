@@ -1,2 +1,3 @@
 # pythonBlog
-python相关的博客代码
+- 2019-08-27:python的下划线作用
+
