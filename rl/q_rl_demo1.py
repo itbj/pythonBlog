@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 # 定义基本的一个环境（问题简单，直接写在外面了）
 # 假设这个世界有20个位置
-N_LOCATION = 20
+N_LOCATION = 90
 # 定义动作空间，假设只有两个动作，向左或者向右
 ACTIONS = ('L', 'R')
 # 定义强化学习公式中的GAMMA，奖励递减率
@@ -13,7 +13,7 @@ GAMMA = 0.9
 ALPHA = 0.2
 # 随机动作的概率
 EPSILON = 0.1
-# 一共训练60回合
+# 一共训练160回合
 EPISODES = 160
 
 
@@ -46,9 +46,10 @@ def get_feedback(state, action):
     if action == 'L':
         if state == N_LOCATION - 2:
             state_ = 'OVER'
+            reward = 1
         else:
             state_ = state + 1
-        reward = 0
+            reward = 0
     else:
         reward = 0
         if state == 0:
